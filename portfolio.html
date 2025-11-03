@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--! завантаження зображення до заголовку сторінки -->
+    <link href="https://img.icons8.com/arcade/16/domain.png" type="image/x-icon" rel="shortcut icon">
+    <title>Webstudio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script type="module" crossorigin src="/be-different/assets/mob-menu-ed11c16a.js"></script>
+    <link rel="stylesheet" href="/be-different/assets/mob-menu-14ee9838.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a class="logo header-logo">
+          Web<span class="logo__style logo__style--header-style">Studio</span>
+        </a>
+        <nav class="header-nav">
+          <ul class="header-list">
+            <li class="header-list__item">
+              <a class="header-list__link" href="./index.html">Студія</a>
+            </li>
+            <li class="header-list__item">
+              <a
+                class="header-list__link header-list__link--active"
+                href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="header-list__item">
+              <a class="header-list__link" href="./">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="contacts-list">
+          <li class="contacts-list__item">
+            <a class="contacts-list__link" href="mailto:info@devstudio.com">
+              <svg class="contacts-list__svg" width="16" height="12">
+                <use href="/be-different/assets/symboldefs-fedcc540.svg#email"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts-list__item">
+            <a class="contacts-list__link" href="tel:+380961111111">
+              <svg class="contacts-list__svg" width="10" height="16">
+                <use href="/be-different/assets/symboldefs-fedcc540.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <button class="mob-menu-open-btn">
+          <svg class="svg-button" width="40" height="40">
+            <use href="/be-different/assets/symboldefs-fedcc540.svg#menu-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu-box">
+        <button class="mob-menu-close-btn">
+          <svg width="19" height="19">
+            <use href="/be-different/assets/symboldefs-fedcc540.svg#cross"></use>
+          </svg>
+        </button>
+        <nav class="mob-menu-nav">
+          <ul class="mob-menu-nav-list">
+            <li class="mob-menu-nav-list-item">
+              <a class="mob-menu-nav-list-link" href="./index.html"> Студія</a>
+            </li>
+            <li class="mob-menu-nav-list-item">
+              <a class="mob-menu-nav-list-link" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mob-menu-nav-list-item">
+              <a class="mob-menu-nav-list-link" href="">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mob-contact-box">
+          <ul class="mob-contact-list">
+            <li class="mob-contact-list-item">
+              <a class="mob-contact-list-link" href="">+380961111111</a>
+            </li>
+            <li class="mob-contact-list-item">
+              <a class="mob-contact-list-link" href="">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mob-social-list">
+            <li class="mob-social-list-item">
+              <a class="mob-social-list-link" href="">Instagram</a>
+            </li>
+            <li class="mob-social-list-item">
+              <a class="mob-social-list-link" href="">Twitter</a>
+            </li>
+            <li class="mob-social-list-item">
+              <a class="mob-social-list-link" href="">Facebook</a>
+            </li>
+            <li class="mob-social-list-item">
+              <a class="mob-social-list-link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="portfolio">
+        <div class="container flex-column">
+          <ul class="button-list">
+            <li class="button-list__item">
+              <button class="button-list__button" type="button">Усі</button>
+            </li>
+            <li class="button-list__item">
+              <button class="button-list__button" type="button">
+                Веб-сайти
+              </button>
+            </li>
+            <li class="button-list__item">
+              <button class="button-list__button" type="button">Додатки</button>
+            </li>
+            <li class="button-list__item">
+              <button class="button-list__button" type="button">Дизайн</button>
+            </li>
+            <li class="button-list__item">
+              <button class="button-list__button" type="button">
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+          <ul class="portfolio-list">
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+                <picture>
+                  <source
+                    srcset="/be-different/assets/devlaptop-desktop-1x-1d881237.jpg 1x, /be-different/assets/devlaptop-desktop-2x-ccf38910.jpg 2x, /be-different/assets/devlaptop-desktop-3x-5a324f1b.jpg 3x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/devlaptop-tablet-1x-d2681831.jpg 1x, /be-different/assets/devlaptop-tablet-2x-69be8762.jpg 2x, /be-different/assets/devlaptop-tablet-3x-0cb81880.jpg 3x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/devlaptop-mobile-1x-82985ade.jpg 1x, /be-different/assets/devlaptop-mobile-2x-92343e63.jpg 2x, /be-different/assets/devlaptop-mobile-3x-03a2b220.jpg 3x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="portfolio-list__img"
+                    src="/be-different/assets/devlaptop-mobile-1x-82985ade.jpg"
+                    alt="devlaptop"
+                  />
+                </picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">Технокряк</h3>
+                <p class="portfolio-list__text">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+                <picture>
+                  <source
+                    srcset="/be-different/assets/basketball-desktop-1x-56cf6c8a.jpg 1x, /be-different/assets/basketball-desktop-2x-5e9511b9.jpg 2x, /be-different/assets/basketball-desktop-3x-22934c68.jpg 3x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/basketball-tablet-1x-4ac74a70.jpg 1x, /be-different/assets/basketball-tablet-2x-56268e58.jpg 2x, /be-different/assets/basketball-tablet-3x-64be3568.jpg 3x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/basketball-mobile-1x-0daca067.jpg 1x, /be-different/assets/basketball-mobile-2x-150ce7ef.jpg 2x, /be-different/assets/basketball-mobile-3x-ff8c144e.jpg 3x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="portfolio-list__img"
+                    src="./images/batsketball-mobile-1x.jpg"
+                    alt="batsketball"
+                  />
+                </picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">
+                  Постер New Orlean vs Golden Star
+                </h3>
+                <p class="portfolio-list__text">Дизайн</p>
+              </div>
+            </li>
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+                <picture>
+                  <source
+                    srcset="/be-different/assets/shark-desktop-1x-0e15e831.jpg 1x, /be-different/assets/shark-desktop-2x-88b35a40.jpg 2x, /be-different/assets/shark-desktop-3x-7fd97418.jpg 3x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/shark-tablet-1x-6a70a0d2.jpg 1x, /be-different/assets/shark-tablet-2x-7145047f.jpg 2x, /be-different/assets/shark-tablet-3x-2c3bddca.jpg 3x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/shark-mobile-1x-971ee22d.jpg 1x, /be-different/assets/shark-mobile-2x-6dc9c634.jpg 2x, /be-different/assets/shark-mobile-3x-085e36ba.jpg 3x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="portfolio-list__img"
+                    src="/be-different/assets/shark-mobile-1x-971ee22d.jpg"
+                    alt="shark"
+                  />
+                </picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">Ресторан Seafood</h3>
+                <p class="portfolio-list__text">Додаток</p>
+              </div>
+            </li>
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+                <picture>
+                  <source
+                    srcset="/be-different/assets/headphones-desktop-1x-354ba2d1.jpg 1x, /be-different/assets/headphones-desktop-2x-7b14aee1.jpg 2x, /be-different/assets/headphones-desktop-3x-0c77ccba.jpg 3x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/headphones-tablet-1x-63519939.jpg 1x, /be-different/assets/headphones-tablet-2x-49713b60.jpg 2x, /be-different/assets/headphones-tablet-3x-1126b3e9.jpg 3x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/headphones-mobile-1x-c06549bc.jpg 1x, /be-different/assets/headphones-mobile-2x-1467eef0.jpg 2x, /be-different/assets/headphones-mobile-3x-3673dabc.jpg 3x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="portfolio-list__img"
+                    src="/be-different/assets/headphones-mobile-1x-c06549bc.jpg"
+                    alt="headphones"
+                  />
+                </picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">Проєкт Prime</h3>
+                <p class="portfolio-list__text">Маркетинг</p>
+              </div>
+            </li>
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+                <picture>
+                  <source
+                    srcset="/be-different/assets/box-desktop-1x-bebefa76.jpg 1x, /be-different/assets/box-desktop-2x-c2972763.jpg 2x, /be-different/assets/box-desktop-3x-8f22a36f.jpg 3x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="data:image/jpeg;base64,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 1x, /be-different/assets/box-tablet-2x-a605a584.jpg 2x, /be-different/assets/box-tablet-3x-9dab68d8.jpg 3x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/box-mobile-1x-691d937e.jpg 1x, /be-different/assets/box-mobile-2x-273e7e3c.jpg 2x, /be-different/assets/box-mobile-3x-e0a45675.jpg 3x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="portfolio-list__img"
+                    src="/be-different/assets/box-mobile-1x-691d937e.jpg"
+                    alt="box"
+                  />
+                </picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">Проєкт Boxes</h3>
+                <p class="portfolio-list__text">Додаток</p>
+              </div>
+            </li>
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+                <picture>
+                  <source
+                    srcset="/be-different/assets/monitor-desktop-1x-af8c61c5.jpg 1x, /be-different/assets/monitor-desktop-2x-4d443454.jpg 2x, /be-different/assets/monitor-desktop-3x-9ebc5450.jpg 3x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/monitor-tablet-1x-44306512.jpg 1x, /be-different/assets/monitor-tablet-2x-a96c5160.jpg 2x, /be-different/assets/monitor-tablet-3x-e008a78b.jpg 3x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/monitor-mobile-1x-331f7c11.jpg 1x, /be-different/assets/monitor-mobile-2x-ccf4d694.jpg 2x, /be-different/assets/monitor-mobile-3x-00a43a75.jpg 3x"
+                    media="(max-width: 767px)"
+                  />
+                  <img   class="portfolio-list__img" src="/be-different/assets/monitor-mobile-1x-331f7c11.jpg" alt="monitor" />
+                </picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">
+                  Inspiration has no Borders
+                </h3>
+                <p class="portfolio-list__text">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+                <picture>
+                  <source
+                    srcset="/be-different/assets/book-desktop-1x-2d420d2d.jpg 1x, /be-different/assets/book-desktop-2x-7ba425a8.jpg 2x, /be-different/assets/book-desktop-3x-4f39c718.jpg 3x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/book-tablet-1x-e404fdca.jpg 1x, /be-different/assets/book-tablet-2x-f438f00f.jpg 2x, /be-different/assets/book-tablet-3x-9a6d49c6.jpg 3x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="/be-different/assets/book-mobile-1x-573f9f23.jpg 1x, /be-different/assets/book-mobile-2x-6b60acae.jpg 2x, /be-different/assets/book-mobile-3x-2a714540.jpg 3x"
+                    media="(max-width: 767px)"
+                  />
+                  <img class="portfolio-list__img" src="/be-different/assets/book-mobile-1x-573f9f23.jpg" alt="book" />
+                </picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">
+                  Видання Limited Edition
+                </h3>
+                <p class="portfolio-list__text">Дизайн</p>
+              </div>
+            </li>
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+               <picture>
+  <source srcset="/be-different/assets/tag-desktop-1x-dd32831d.jpg 1x, /be-different/assets/tag-desktop-2x-5e7ee275.jpg 2x, /be-different/assets/tag-desktop-3x-a9db7b6a.jpg 3x" media="(min-width: 1200px)">
+  <source srcset="/be-different/assets/tag-tablet-1x-f1abe03e.jpg 1x, /be-different/assets/tag-tablet-2x-c6174dc9.jpg 2x, /be-different/assets/tag-tablet-3x-fe17faca.jpg 3x" media="(min-width: 768px)">
+  <source srcset="/be-different/assets/tag-mobile-1x-c0e33d9c.jpg 1x, /be-different/assets/tag-mobile-2x-59b83882.jpg 2x, /be-different/assets/tag-mobile-3x-1ed9620c.jpg 3x" media="(max-width: 767px)">
+  <img class="portfolio-list__img" src="/be-different/assets/tag-mobile-1x-c0e33d9c.jpg" alt="tag">
+</picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">Проєкт LAB</h3>
+                <p class="portfolio-list__text">Маркетинг</p>
+              </div>
+            </li>
+            <li class="portfolio-list__item">
+              <div class="portfolio-list__div">
+<picture>
+  <source srcset="/be-different/assets/laptop-desktop-1x-912ba181.jpg 1x, /be-different/assets/laptop-desktop-2x-cb886631.jpg 2x, /be-different/assets/laptop-desktop-3x-b4695c0a.jpg 3x" media="(min-width: 1200px)">
+  <source srcset="/be-different/assets/laptop-tablet-1x-446af751.jpg 1x, /be-different/assets/laptop-tablet-2x-16d3971e.jpg 2x, /be-different/assets/laptop-tablet-3x-da67b2ba.jpg 3x" media="(min-width: 768px)">
+  <source srcset="/be-different/assets/laptop-mobile-1x-820a1d35.jpg 1x, /be-different/assets/laptop-mobile-2x-ae41411d.jpg 2x, /be-different/assets/laptop-mobile-3x-36ac7994.jpg 3x" media="(max-width: 767px)">
+  <img  class="portfolio-list__img" src="/be-different/assets/laptop-mobile-1x-820a1d35.jpg" alt="laptop">
+</picture>
+
+                <div class="portfolio-list__div--active">
+                  <p>
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-list__box">
+                <h3 class="portfolio-list__paragraph">Growing Business</h3>
+                <p class="portfolio-list__text">Додаток</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="two-box">
+          <div class="div-footer">
+            <a class="logo logo-footer">
+              Web<span class="logo__style logo__style--footer-style"
+                >Studio</span
+              >
+            </a>
+            <address class="footer-address">
+              <ul class="footer-address-list">
+                <li
+                  class="footer-address-list__item footer-address-list__item--1"
+                >
+                  м. Київ, пр-т Лесі Українки, 26
+                </li>
+                <li class="footer-address-list__item">
+                  <a
+                    class="footer-address-list__link"
+                    href="mailto:info@devstudio.com"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer-address-list__item">
+                  <a class="footer-address-list__link" href="tel:+380961111111">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="follow">
+            <h2 class="follow-title">ПРИЄДНУЙТЕСЬ</h2>
+            <ul class="follow-list">
+              <li class="follow-list__item">
+                <a href="./" class="follow-list__link">
+                  <svg width="20" height="20">
+                    <use href="/be-different/assets/symboldefs-fedcc540.svg#instagram"></use></svg
+                ></a>
+              </li>
+              <li class="follow-list__item">
+                <a href="./" class="follow-list__link"
+                  ><svg width="20" height="20">
+                    <use href="/be-different/assets/symboldefs-fedcc540.svg#twitter"></use></svg
+                ></a>
+              </li>
+              <li class="follow-list__item">
+                <a href="./" class="follow-list__link"
+                  ><svg width="20" height="20">
+                    <use href="/be-different/assets/symboldefs-fedcc540.svg#facebook"></use></svg
+                ></a>
+              </li>
+              <li class="follow-list__item">
+                <a href="./" class="follow-list__link">
+                  <svg width="20" height="20">
+                    <use href="/be-different/assets/symboldefs-fedcc540.svg#linkedin"></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="newsletter-box">
+          <p class="footer-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
+          <form class="newsletter">
+            <input
+              class="newsletter-box__input"
+              required=""
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <button class="btn newsletter-box__button" type="submit">
+              <span class="newsletter-box__title"> Підписатися</span>
+              <svg class="telegram-icon" width="24" height="24">
+                <use href="/be-different/assets/symboldefs-fedcc540.svg#iconsend"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
