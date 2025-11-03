@@ -1,4 +1,4 @@
-# Vanilla JS App project ---> hw-js-vite
+# Vanilla JS App project ---> be-different
 
 Цей проект було створено за допомогою Vite. Для знайомства та налаштування
 додаткових можливостей [звернись до документації](https://vitejs.dev/).

@@ -1,11 +1,11 @@
 {
-  "name": "webstudio-scss-adaptive-js-vite-my",
+  "name": "be-different",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build --base=/webstudio-scss-adaptive-js-vite-my/",
+    "build": "vite build --base=/be-different/",
     "preview": "vite preview"
   },
   "devDependencies": {

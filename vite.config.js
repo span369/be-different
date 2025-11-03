@@ -7,7 +7,7 @@ import FullReload from 'vite-plugin-full-reload';
 // import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/webstudio-scss-adaptive-js-vite-my/', //! 👈 ВАЖЛИВО: вкажіть базу
+  base: '/be-different/', //! 👈 ВАЖЛИВО: вкажіть базу
   root: 'src',
   build: {
     rollupOptions: {
