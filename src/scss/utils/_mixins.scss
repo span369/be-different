@@ -1,0 +1,85 @@
+@mixin flex($justify-content, $align-items, $gap, $flex-wrap, $flex-direction) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+}
+
+
+@mixin mob($breakPoint) {
+    @media screen and (min-width: $breakPoint) {
+        @content;
+    }
+}
+
+@mixin tab($breakPoint) {
+    @media screen and (min-width: $breakPoint) {
+        @content;
+    }
+}
+
+@mixin desc($breakPoint) {
+    @media screen and (min-width: $breakPoint) {
+        @content;
+    }
+}
+
+@mixin btn($backgroundColor: var(--button-color)) {
+    width: 200px;
+    height: 50px;
+    display: block; //!
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: .06em;
+    color: var(--white-color);
+    background-color: $backgroundColor;
+    cursor: pointer;
+}
+
+
+// @mixin flex-center {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row;
+// }
+
+// @mixin flex {
+//     display: flex;
+//     flex-direction: row;
+// }
+
+// @mixin FlCol-centre {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// @mixin Flwr-centre {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+// }
+
+// @mixin FlCol {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// @mixin InFl-center {
+//     display: inline-flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+// @mixin FlWr {
+//     display: flex;
+//         flex-wrap: wrap;
+// }

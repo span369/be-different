@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Ігор Дем'яненко",
+        "position": "Product Designer",
+        "images": {
+            "desktop": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-desktop-1x-b138e391.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-desktop-2x-18e23e2e.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-desktop-3x-f0641e09.jpg 3x"
+            ],
+            "tablet": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-tablet-1x-a1f96800.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-tablet-2x-5bd351b1.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-tablet-3x-4c28ed9e.jpg 3x"
+            ],
+            "mobile": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-mobile-1x-9e045f9a.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-mobile-2x-dedb5f8b.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-mobile-3x-e67f5e2c.jpg 3x"
+            ],
+            "default": "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/igor-mobile-1x-9e045f9a.jpg"
+        },
+        "icons": [
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#instagram",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#twitter",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#facebook",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Ольга Рєпіна",
+        "position": "Frontend Developer",
+        "images": {
+            "desktop": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-desktop-1x-04e8f028.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-desktop-2x-c2f88c59.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-desktop-3x-58abe69a.jpg 3x"
+            ],
+            "tablet": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-tablet-1x-cfa58443.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-tablet-2x-86184944.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-tablet-3x-0a94d03d.jpg 3x"
+            ],
+            "mobile": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-mobile-1x-f516194c.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-mobile-2x-2804cc8f.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-mobile-3x-834474c3.jpg 3x"
+            ],
+            "default": "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/olga-mobile-1x-f516194c.jpg"
+        },
+        "icons": [
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#instagram",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#twitter",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#facebook",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Микола Тарасов",
+        "position": "Marketing",
+        "images": {
+            "desktop": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-desktop-1x-224be953.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-desktop-2x-adce90a2.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-desktop-3x-52585efb.jpg 3x"
+            ],
+            "tablet": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-tablet-1x-eb9c14c4.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-tablet-2x-0cabf309.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-tablet-3x-22eb3a11.jpg 3x"
+            ],
+            "mobile": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-mobile-1x-557651d7.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-mobile-2x-58b208b4.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-mobile-3x-63372173.jpg 3x"
+            ],
+            "default": "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/mykola-mobile-1x-557651d7.jpg"
+        },
+        "icons": [
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#instagram",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#twitter",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#facebook",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Михайло Єрмаков",
+        "position": "UI Designer",
+        "images": {
+            "desktop": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-desktop-1x-da48a78f.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-desktop-2x-384d3bbd.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-desktop-3x-de19754e.jpg 3x"
+            ],
+            "tablet": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-tablet-1x-58c7255e.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-tablet-2x-fbb78bcf.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-tablet-3x-9b8c52d7.jpg 3x"
+            ],
+            "mobile": [
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-mobile-1x-fdca993a.jpg 1x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-mobile-2x-31262677.jpg 2x,",
+                "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-mobile-3x-1020d3c1.jpg 3x"
+            ],
+            "default": "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/muhailo-mobile-1x-fdca993a.jpg"
+        },
+        "icons": [
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#instagram",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#twitter",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#facebook",
+            "https://ruslan379.github.io/webstudio-scss-adaptive-js-vite-my/assets/symboldefs-fedcc540.svg#linkedin"
+        ]
+    }
+]

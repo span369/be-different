@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Ігор Дем'яненко",
+        "position": "Product Designer",
+        "images": {
+            "desktop": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-desktop-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-desktop-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-desktop-3x.jpg 3x"
+            ],
+            "tablet": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-tablet-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-tablet-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-tablet-3x.jpg 3x"
+            ],
+            "mobile": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-mobile-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-mobile-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-mobile-3x.jpg 3x"
+            ],
+            "default": "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/igor-mobile-1x.jpg"
+        },
+        "icons": [
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#instagram",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#twitter",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#facebook",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Ольга Рєпіна",
+        "position": "Frontend Developer",
+        "images": {
+            "desktop": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-desktop-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-desktop-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-desktop-3x.jpg 3x"
+            ],
+            "tablet": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-tablet-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-tablet-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-tablet-3x.jpg 3x"
+            ],
+            "mobile": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-mobile-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-mobile-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-mobile-3x.jpg 3x"
+            ],
+            "default": "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/olga-mobile-1x.jpg"
+        },
+        "icons": [
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#instagram",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#twitter",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#facebook",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Микола Тарасов",
+        "position": "Marketing",
+        "images": {
+            "desktop": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-desktop-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-desktop-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-desktop-3x.jpg 3x"
+            ],
+            "tablet": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-tablet-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-tablet-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-tablet-3x.jpg 3x"
+            ],
+            "mobile": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-mobile-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-mobile-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-mobile-3x.jpg 3x"
+            ],
+            "default": "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/mykola-mobile-1x.jpg"
+        },
+        "icons": [
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#instagram",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#twitter",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#facebook",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Михайло Єрмаков",
+        "position": "UI Designer",
+        "images": {
+            "desktop": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-desktop-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-desktop-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-desktop-3x.jpg 3x"
+            ],
+            "tablet": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-tablet-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-tablet-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-tablet-3x.jpg 3x"
+            ],
+            "mobile": [
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-mobile-1x.jpg 1x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-mobile-2x.jpg 2x,",
+                "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-mobile-3x.jpg 3x"
+            ],
+            "default": "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/muhailo-mobile-1x.jpg"
+        },
+        "icons": [
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#instagram",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#twitter",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#facebook",
+            "http://localhost:5176/webstudio-scss-adaptive-js-vite-my/images/symboldefs.svg#linkedin"
+        ]
+    }
+]

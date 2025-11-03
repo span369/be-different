@@ -1,0 +1,56 @@
+.our-work {
+    display: none;
+
+    @include desc(getBreakPoint('desktop')) {
+        display: block;
+    }
+
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+.our-work-title {
+        text-align: center;
+        color: getColor('link');
+        font-size: 36px;
+        margin-bottom: 50px;
+    
+}
+
+
+.our-work-list {
+        @include flex(_,_,_,_,_);
+       
+    
+
+
+    &__item {
+       
+            width: 370px;
+            position: relative;
+        
+    }
+
+    &__item:not(:last-child) {  
+            margin-right: 30px;
+    }
+
+    &__title {
+        
+            position: absolute;
+            background: rgba(47, 48, 58, 0.8);
+            width: 100%;
+            height: 70px;
+            @include flex(center,center,_,_,_);
+
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.03em;
+            bottom: 0;
+            left: 0;
+            color: getColor('light');
+        
+    }
+}
+

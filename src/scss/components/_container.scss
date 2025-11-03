@@ -1,0 +1,22 @@
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    outline: 1px solid tomato;
+
+    @media screen and (min-width: getBreakPoint('mobile')) {
+        width: getBreakPoint('mobile');
+        outline: 1px green solid;
+    }
+
+    @media screen and (min-width: getBreakPoint('tablet')) {
+        width: getBreakPoint('tablet');
+        outline: 1px red solid;
+    }
+
+    @media screen and (min-width: getBreakPoint('desktop')) {
+        width: getBreakPoint('desktop');
+        outline: 1px blue solid;
+    }
+
+}
+

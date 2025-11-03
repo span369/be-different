@@ -1,0 +1,44 @@
+:root {
+    --header-color: #ECECEC;
+    --button-color: #2196F3;
+    --white-color: #FFFFFF;
+    --main-color: #2F303A;
+    --grey-color: #757575;
+    --title-work: #F5F4FA;
+    --link-color: #212121;
+    --color-dark: #000000;
+    --buttom-active: #188CE8;
+    --border-color: #eeeeee;
+    --font-family: "Roboto", sans-serif;
+    --second-family: "Raleway", sans-serif;
+}
+
+
+
+$fonts: (
+    font-family: "Roboto",
+    second-family: "Raleway",
+);
+// * ================= colors ==================
+$colors: (
+    header:#ECECEC,
+    button:#2196F3,
+    light:#FFFFFF,
+    main:#2F303A,
+    text:#757575,
+    title:#F5F4FA,
+    link:#212121,
+    dark:#000000,
+    active:#188CE8,
+    border:#eeeeee,
+);
+
+// * ================= fonts ===================
+@function getFont($key) {
+    @return map-get($fonts, $key);
+}
+
+// * ================= colors ==================
+@function getColor($key) {
+    @return map-get($colors, $key);
+}

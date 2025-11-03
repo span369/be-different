@@ -1,0 +1,156 @@
+
+.header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include tab(768px){
+        padding-top: 26px;
+        padding-bottom:26px;
+    }
+
+    .header-container{
+        justify-content: space-between;
+        @include tab(768px){
+            @include flex(_,_,_,_,_);   
+        }
+        
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    
+
+        .logo {
+            font-family: getFont('second-family');
+            font-weight: 700;
+            font-size: 26px;
+            letter-spacing: 0.03em;
+            color: getColor('button');
+            margin-right: 87px;
+            display: block;
+@include desc(1200px){
+    margin-right: 92px;
+}
+            &__style--header-style {
+                color: getColor('dark');
+            }
+        }
+
+
+        .header-nav {
+            @include desc(1200px){
+                margin-right: 318px;
+            @include flex(center,center,_,_,_);
+            }
+
+            .header-list {
+            @include flex(center,center,_,_,_);
+                
+                display: none;
+                @include tab(768px){
+            @include flex(_,_,_,_,_);
+                    
+                }
+
+                
+                &__item:not(:last-child) {
+                    margin-right: 50px;
+                }
+
+                &__item {
+                    position: relative;
+                }
+
+                &__link {
+                    color: getColor('link');
+                    font-weight: 500;
+                    text-decoration: none;
+                    letter-spacing: 0.02em;
+                    
+                    /* анімація */
+                    transition-property: color;
+                    transition-duration: 250ms;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-delay: 0;
+                }
+
+                &__link:hover {
+                    color: getColor('button');
+                }
+
+                &__link--active::after {
+                    position: absolute;
+                    content: "";
+                    margin-top: 28px;
+                    left: 0;    
+                    width: 100%;
+                    height: 3px;
+                    background-color: getColor('button');
+                    border-radius: 3px;
+                    display: block;
+                    /* анімація */
+                    transition-property: background-color;
+                    transition-duration: 250ms;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-delay: 0;
+                }
+
+                &__link--active:hover::after {
+                    background-color: darkblue;
+                }
+            }
+        }
+
+        .contacts-list {
+            display: none;
+        //   @include flex-center;
+        @include tab(768px){
+            @include flex(_,_,_,_,column);
+            margin-right: 0;
+            margin-left: auto;
+        }
+        @include desc(1200px){
+            @include flex(center,center,_,_,row)
+        }
+
+
+            &__item:nth-child(1) {
+                margin-right: 30px;
+            }
+
+            &__item:hover {
+                fill: getColor('button');
+                color: getColor('button');
+            }
+
+            &__link:hover {
+                fill: getColor('button');
+                color: getColor('button');
+            }
+
+    
+            &__link {
+                color: var(--grey-color);
+                text-decoration: none;
+                font-weight: 500;
+                letter-spacing: 0.02em;
+                @include flex(_,center,10px,_,_);
+                fill: #757575;
+                transition-property: color, fill;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-delay: 0;
+            }
+
+
+            &__svg:nth-child(1) {
+                margin-top: 2px;
+            }
+        }
+    }
+}
+.svg-button{
+    @include tab(768px){
+        display: none;
+    }
+}

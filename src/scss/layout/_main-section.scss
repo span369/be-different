@@ -1,0 +1,230 @@
+.main-section {
+    background-color: getColor('main');
+    padding-top: 118px;
+    padding-bottom: 118px;
+    // background-image:
+    //     linear-gradient(rgba(47, 48, 58, 0.4),
+    //         rgba(47, 48, 58, 0.4)),
+    //     url(../images/main-background.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    @media screen and (min-width: getBreakPoint('desktop')){
+    padding-top: 200px;
+    padding-bottom: 200px;
+    }
+
+    .main-section-title {
+        color: getColor('light');
+        text-align: center;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.36;
+        width: 360px;
+        margin: 0 auto;
+        @media screen and (min-width: getBreakPoint('desktop')){
+            width: 696px;
+            font-size: 44px;
+        }
+    }
+
+
+    .main-section-button {
+        color: getColor('light');
+        background-color: getColor('button');
+        font-size: 16px;
+        line-height: 1.87;
+        border-radius: 8px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        padding: 10px 24px;
+        border: none;
+        animation-name: grow;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-delay: 0.5s;
+        animation-iteration-count: 2;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        @media screen and (min-width: getBreakPoint('desktop')){
+            padding: 10px 32px;
+        }
+
+
+    }
+
+    .main-section-button:active {
+        background-color: getColor('active');
+    }
+    @keyframes grow{
+                 0%{scale:1;}
+                 50%{scale:1.1;}
+                 100%{scale:1;}
+            }
+
+}
+
+@media screen and (max-width: 480px) {
+  .main-section {
+    background-color: getColor('main');
+    // background-image: 
+    //   linear-gradient(rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.5)),
+    //   url('../images/main-background.jpg');
+    // background-size: cover;
+    // background-position: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+
+    .main-section-title {
+      color: getColor('light');
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 1.4;
+      letter-spacing: 0.03em;
+      width: 90%;
+      margin: 0 auto 25px auto;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .main-section-button {
+      display: inline-block;
+      width: 85%;
+      max-width: 280px;
+      color: getColor('light');
+      background-color: getColor('button');
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      margin: 0 auto;
+
+      &:hover,
+      &:focus {
+        background-color: getColor('active');
+        transform: scale(1.05);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+.overlay {
+    //* До 767px
+    // height: 400px;
+    background-image:
+             linear-gradient(rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.5)),
+            url("../images/background-mobile-1x.jpg");
+    background-position: center;
+    background-size: cover;
+    
+    //* 2x screens, retina
+    @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: 
+                linear-gradient(
+                    to right,
+                    rgba(47, 48, 58, 0.4), 
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url("../images/background-mobile-2x.jpg");
+    }
+      //* 3x screens, retina
+    @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+            background-image: 
+                linear-gradient(
+                    to right,
+                    rgba(47, 48, 58, 0.4), 
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url("../images/background-mobile-3x.jpg");
+    }
+    
+    //* Від 768px
+    @media screen and (min-width: 768px) {
+        // max-width: 1199px;
+        // height: 400px;
+        background-image: 
+            linear-gradient(
+                to right, 
+                rgba(47, 48, 58, 0.4), 
+                rgba(47, 48, 58, 0.4)
+            ),
+            url("../images/background-tablet-1x.jpg");
+        
+        //* 2x screens, retina
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: 
+                linear-gradient(
+                    to right, 
+                    rgba(47, 48, 58, 0.4), 
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url("../images/background-tablet-2x.jpg");
+        }  
+         @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+            background-image: 
+                linear-gradient(
+                    to right,
+                    rgba(47, 48, 58, 0.4), 
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url("../images/background-tablet-3x.jpg");
+    }
+    }
+
+
+    //* Від 1200px
+    @media screen and (min-width: 1200px) {
+        // max-width: 1600px;
+        // height: 600px;
+        background-image: 
+            linear-gradient(
+                to right, 
+                    rgba(47, 48, 58, 0.4), 
+                    rgba(47, 48, 58, 0.4)
+                ),
+           url("../images/background-desktop-1x.jpg");
+        
+        //* 2x screens, retina
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: 
+                    linear-gradient(
+                        to right,  
+                        rgba(47, 48, 58, 0.4), 
+                        rgba(47, 48, 58, 0.4)
+                    ),
+                    url("../images/background-desktop-2x.jpg");
+        }
+                 @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+            background-image: 
+                linear-gradient(
+                    to right,
+                    rgba(47, 48, 58, 0.4), 
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url("../images/background-desktop-3x.jpg");
+    }
+    }
+}

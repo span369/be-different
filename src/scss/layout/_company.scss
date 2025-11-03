@@ -1,0 +1,62 @@
+.company {
+    padding: 60px 0;
+    @media screen and (min-width: getBreakPoint('desktop')){
+        padding: 94px 0;
+    }
+
+    .company-title {
+        text-align: center;
+        font-family: getFont('font-family');
+        font-weight: 700;
+        font-size: 28px;
+        letter-spacing: 0.03em;
+        color: getColor('link');
+        margin-bottom: 50px;
+
+    }
+
+    .company-list {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        @media screen and (min-width: getBreakPoint('desktop')){
+            @include flex(_,_,_,_,_);
+        }
+
+
+        &__item {
+            @include flex(center,center,_,_,column);
+            
+        }
+
+        &__link {
+            @media screen and (min-width: getBreakPoint('tablet')){
+                width: 226;
+            }
+            @media screen and (min-width: getBreakPoint('desktop')){
+                width: 170px;
+            }
+            
+            
+            width: 210px;
+            height: 92px;
+            @include flex(center,center,_,_,_);
+
+            border: 1px solid #AFB1B8;
+            border-radius: 4px;
+            fill: #AFB1B8;
+            /* анімація */
+            transition-property: fill, border-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-delay: 0;
+        }
+        &__link:hover {
+                         fill: getColor('button');
+                         border-color: getColor('button');
+                     }
+    }
+
+}
+

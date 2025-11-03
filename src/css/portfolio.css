@@ -1,0 +1,155 @@
+:root {
+    --header-color: #ECECEC;
+    --button-color: #2196F3;
+    --white-color: #FFFFFF;
+    --main-color: #2F303A;
+    --grey-color: #757575;
+    --title-work: #F5F4FA;
+    --link-color: #212121;
+    --color-dark: #000000;
+}
+   
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    outline: 1px solid tomato;
+}
+
+    body {
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+    }
+.header {
+    background-color: var(--header-color);
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+.logo {
+    vertical-align: middle;
+}
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    color: var(--button-color);
+    margin-right: 89px;
+}
+
+.logo-header {
+    color: var(--color-dark);
+}
+
+.header-nav-ul-li-a {
+    color: var(--link-color);
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.header-ul-li-a {
+    color: var(--grey-color);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.header-nav,
+.header-contacts-list,
+.header-nav-item,
+.contacts-item,
+.header-nav-list,
+.logo {
+    display: inline-block;
+}
+.header-nav{
+    margin-right: 340px;
+}
+
+.header-ul-li-a:hover {
+    color: var(--button-color)
+}
+
+.header-ul-li-a {
+    color: var(--grey-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header-nav-item:not(:last-child) {
+    margin-right: 46px;
+}  
+
+
+.contacts-item:nth-child(1) {
+    margin-right: 46px;
+}
+
+.header-ul-li-a:hover {
+    color: var(--button-color)
+}
+
+.header-nav-ul-li-a:hover {
+    color: var(--button-color);
+}
+
+.header-nav-ul-li-a:hover {
+    color: var(--button-color);
+
+}
+/* hero */
+.hero-list{
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* footer */
+.footer {
+    background-color: var(--main-color);
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.footer-address-ul-li-1 {
+    color: var(--white-color);
+    font-weight: 400;
+    line-height: 1.71;
+    font-style: normal;
+    -bottom: 9px;
+}
+
+.footer-address-ul-li-a {
+    color: rgba(255, 255, 255, 0.6);
+    ;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 1.71;
+    font-style: normal;
+}
+
+.footer-address-ul-li-a:hover {
+    color: var(--button-color)
+}
+
+.logo-footer-span{
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+.logo-footer{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    color: var(--button-color);
+    margin-bottom: 20px;
+
+}
+.footer-address-ul-li:not(:last-child){
+    margin-bottom: 9px;
+}
+
+        /* PORTFOLIO CSS!!! */

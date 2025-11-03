@@ -1,0 +1,229 @@
+/* Кнопка відкриття мобільного меню */
+.mob-menu-open-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 110;
+}
+
+/* Мобільне меню */
+.mob-menu-box {
+  display: none;             // приховане за замовчуванням
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  padding: 48px 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 120;
+
+  &.is-open {
+    display: flex;           // показуємо лише при відкритті
+    transform: translateX(0);
+  }
+}
+
+/* Кнопка закриття меню */
+.mob-menu-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Списки меню, контактів, соцмереж */
+.mob-menu-nav-list,
+.mob-contact-list,
+.mob-social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mob-menu-nav-list-item,
+.mob-contact-list-item,
+.mob-social-list-item {
+  margin-bottom: 15px;
+}
+
+.mob-menu-nav-list-link,
+.mob-contact-list-link,
+.mob-social-list-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+/* Backdrop */
+.mob-menu-backdrop {
+  display: none;             // приховане за замовчуванням
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 115;
+  transition: opacity 0.3s ease;
+
+  &.is-visible {
+    display: block;
+  }
+}
+
+/* Медіа-запити для мобільних екранів */
+@media (max-width: 768px) {
+  .mob-menu-open-btn {
+    display: block;
+  }
+
+  .mob-menu-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .mob-menu-nav-list-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    color: #000;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mob-contact-list {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .mob-contact-list-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: #333;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: #2196f3;
+    }
+
+    &:first-child {
+      font-size: 34px;
+    }
+  }
+
+  .mob-social-list {
+    display: flex;
+  }
+
+  .mob-social-list-item {
+    padding: 0 10px;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  
+  .mob-social-list-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .mob-menu-box {
+    padding: 32px 20px;
+  }
+
+  .mob-menu-nav-list {
+    gap: 24px;
+  }
+
+  .mob-menu-nav-list-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 0.02em;
+    color: #000;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: #2196f3;
+    }
+  }
+
+  
+  .mob-contact-list {
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  .mob-contact-list-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #333;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: #2196f3;
+    }
+
+    &:first-child {
+      font-size: 20px;
+    }
+  }
+
+  .mob-social-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mob-social-list-item {
+    padding: 0 6px;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  .mob-social-list-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+
+  .mob-menu-close-btn {
+    top: 10px;
+    right: 10px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
