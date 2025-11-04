@@ -4,6 +4,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  .container {
+    padding-bottom: 30px;
+  }
+
   &-title {
     text-align: center;
     color: getColor("link");
@@ -21,13 +25,16 @@
     justify-content: center;
     
     @media screen and (min-width: getBreakPoint("tablet")) {
+      // height: 421px; //! для Intersection Observer
+      overflow: auto; //! для Intersection Observer
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 30px;
     }
     @media screen and (min-width: getBreakPoint("desktop")) {
-      @include flex(_, _, _, _, _);
+      // @include flex(_, _, _, _, _); //?
+      @include flex(_, _, 16px, _, _); //! для Intersection Observer
     }
 
     &__item {
@@ -38,7 +45,7 @@
       width: 450px;
       text-align: center;
       padding-bottom: 24px;
-      margin-bottom: 30px;
+      // margin-bottom: 30px; //! для Intersection Observer
       // outline: 1px solid blue;
 
       @media screen and (min-width: getBreakPoint("tablet")) {
