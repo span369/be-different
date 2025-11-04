@@ -70,7 +70,16 @@
       margin-bottom: 30px;
       width: 450px;
       cursor: pointer; //!
+      //! Для плавної появи з Intersection Observer
+      opacity: 0;
+      transition: opacity 1.0s ease-in-out;
     }
+
+    //! Для плавної появи з Intersection Observer
+    &__img[src] {
+      opacity: 1;
+    }
+    
 
     &__text {
       color: getColor("link");

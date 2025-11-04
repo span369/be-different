@@ -1,4 +1,7 @@
-console.error('Рендеримо список розробників в секції "Наша команда"');
+console.log(
+    '%c Рендеримо список розробників в секції "Наша команда" ',
+    'color: white; background-color: #D33F49',
+);
 
 //! Знаходимо елемент в якому рендерим список розробників
 const developersList = document.querySelector(".our-developers-list");
@@ -172,8 +175,593 @@ let dataDevelopersList = [
 console.log("dataDevelopersList (ПРИКЛАД з різними Рішеннями):", dataDevelopersList); //!
 
 
-//! ✅1️⃣Робимо фінальний варіант dataDevelopersList з урахуванням найкращого варіанта: Рішення-3
+//! ✅1️⃣-1️⃣Робимо фінальний варіант dataDevelopersList з урахуванням найкращого варіанта: Рішення-3
 dataDevelopersList = [
+    {
+        name: "Ігор Дем'яненко",
+        nameId: "IgorDemyanenko",
+        position: "Product Designer",
+        images: {
+            desktop: [
+                new URL("../images/igor-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/igor-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/igor-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/igor-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Ольга Рєпіна",
+        nameId: "OlgaRepina",
+        position: "Frontend Developer",
+        images: {
+            desktop: [
+                new URL("../images/olga-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/olga-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/olga-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/olga-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Микола Тарасов",
+        nameId: "MykolaTarasov",
+        position: "Marketing",
+        images: {
+            desktop: [
+                new URL("../images/mykola-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/mykola-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Михайло Єрмаков",
+        nameId: "MykhailoErmakov",
+        position: "UI Designer",
+        images: {
+            desktop: [
+                new URL("../images/muhailo-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/muhailo-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+];
+
+//! ✅1️⃣-2️⃣Робимо фінальний варіант dataDevelopersList з урахуванням використання Intersection Observer
+//! 2️⃣0️⃣ розробників 👤
+dataDevelopersList = [
+    {
+        name: "Ігор Дем'яненко",
+        nameId: "IgorDemyanenko",
+        position: "Product Designer",
+        images: {
+            desktop: [
+                new URL("../images/igor-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/igor-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/igor-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/igor-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Ольга Рєпіна",
+        nameId: "OlgaRepina",
+        position: "Frontend Developer",
+        images: {
+            desktop: [
+                new URL("../images/olga-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/olga-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/olga-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/olga-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Микола Тарасов",
+        nameId: "MykolaTarasov",
+        position: "Marketing",
+        images: {
+            desktop: [
+                new URL("../images/mykola-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/mykola-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Михайло Єрмаков",
+        nameId: "MykhailoErmakov",
+        position: "UI Designer",
+        images: {
+            desktop: [
+                new URL("../images/muhailo-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/muhailo-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Ігор Дем'яненко",
+        nameId: "IgorDemyanenko",
+        position: "Product Designer",
+        images: {
+            desktop: [
+                new URL("../images/igor-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/igor-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/igor-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/igor-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Ольга Рєпіна",
+        nameId: "OlgaRepina",
+        position: "Frontend Developer",
+        images: {
+            desktop: [
+                new URL("../images/olga-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/olga-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/olga-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/olga-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Микола Тарасов",
+        nameId: "MykolaTarasov",
+        position: "Marketing",
+        images: {
+            desktop: [
+                new URL("../images/mykola-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/mykola-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Михайло Єрмаков",
+        nameId: "MykhailoErmakov",
+        position: "UI Designer",
+        images: {
+            desktop: [
+                new URL("../images/muhailo-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/muhailo-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Ігор Дем'яненко",
+        nameId: "IgorDemyanenko",
+        position: "Product Designer",
+        images: {
+            desktop: [
+                new URL("../images/igor-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/igor-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/igor-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/igor-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Ольга Рєпіна",
+        nameId: "OlgaRepina",
+        position: "Frontend Developer",
+        images: {
+            desktop: [
+                new URL("../images/olga-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/olga-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/olga-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/olga-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Микола Тарасов",
+        nameId: "MykolaTarasov",
+        position: "Marketing",
+        images: {
+            desktop: [
+                new URL("../images/mykola-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/mykola-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Михайло Єрмаков",
+        nameId: "MykhailoErmakov",
+        position: "UI Designer",
+        images: {
+            desktop: [
+                new URL("../images/muhailo-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/muhailo-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Ігор Дем'яненко",
+        nameId: "IgorDemyanenko",
+        position: "Product Designer",
+        images: {
+            desktop: [
+                new URL("../images/igor-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/igor-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/igor-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/igor-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Ольга Рєпіна",
+        nameId: "OlgaRepina",
+        position: "Frontend Developer",
+        images: {
+            desktop: [
+                new URL("../images/olga-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/olga-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/olga-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/olga-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/olga-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/olga-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Микола Тарасов",
+        nameId: "MykolaTarasov",
+        position: "Marketing",
+        images: {
+            desktop: [
+                new URL("../images/mykola-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/mykola-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/mykola-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/mykola-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/mykola-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
+    {
+        name: "Михайло Єрмаков",
+        nameId: "MykhailoErmakov",
+        position: "UI Designer",
+        images: {
+            desktop: [
+                new URL("../images/muhailo-desktop-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-desktop-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-desktop-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            tablet: [
+                new URL("../images/muhailo-tablet-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-tablet-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-tablet-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            mobile: [
+                new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/muhailo-mobile-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/muhailo-mobile-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/muhailo-mobile-1x.jpg", import.meta.url).href
+        },
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
+    },
     {
         name: "Ігор Дем'яненко",
         nameId: "IgorDemyanenko",
@@ -406,13 +994,16 @@ console.log("5️⃣dataDevelopersList (після парсингу з localStor
 
 
 //todo: +++++++++++++++++++++++++ Розмітка з Handlebars +++++++++++++++++++++++++
+//! 6️⃣-1️⃣ Створюємо та використовуємо шаблон 
 import Handlebars from "handlebars";
-import developerTemplate from "../templates/developer.hbs?raw";
+// import developerTemplate from "../templates/developer.hbs?raw";
+//? Використання Intersection Observer для завантаження зображень в секції "Наша команда
+import developerTemplate from "../templates/developer-intersection-observer.hbs?raw";
 
 const template = Handlebars.compile(developerTemplate);
 console.log("template:", template); //!
 
-//! 6️⃣Генеруємо HTML-розмітку для списку всіх розробників
+//! 6️⃣-2️⃣Генеруємо HTML-розмітку для списку всіх розробників
 const markup = dataDevelopersList.map(item => template(item)).join("");
 console.log("6️⃣markup:", markup); //!
 

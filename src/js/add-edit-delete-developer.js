@@ -1,4 +1,7 @@
-console.error('Додаємо/Редагуємо/Видаляємо розробників в секції "Наша команда"');
+console.log(
+    '%c Додаємо/Редагуємо/Видаляємо розробників в секції "Наша команда" ',
+    'color: white; background-color: #D33F49',
+);
 
 //! Зчитуємо дані з Локального сховища (localStorage) та Парсимо (конвертуємо) їх в Масив Об'єктів: dataDevelopersList
 const dataDevelopersList = JSON.parse(localStorage.getItem("dataDevelopers")); //todo: var. 2
