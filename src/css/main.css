@@ -889,6 +889,11 @@ body {
   margin-bottom: 30px;
   width: 450px;
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.our-developers-list__img[src] {
+  opacity: 1;
 }
 .our-developers-list__text {
   color: #212121;

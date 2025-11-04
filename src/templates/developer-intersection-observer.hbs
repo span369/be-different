@@ -1,0 +1,42 @@
+<li class="our-developers-list__item">
+  <picture class="our-developers-list__lazy-picture">
+    <source 
+        data-srcset="
+        {{#each images.desktop}}
+          {{this}}
+        {{/each}}
+        " 
+      media="(min-width: 1200px)" 
+    />
+    <source 
+        data-srcset="
+        {{#each images.tablet}}
+          {{this}}
+        {{/each}}
+        " 
+      media="(min-width: 768px)" 
+    />
+    <source 
+        data-srcset="
+        {{#each images.mobile}}
+          {{this}}
+        {{/each}}
+        " 
+      media="(min-width: 480px)" 
+    />
+    <img class="our-developers-list__img" data-src="{{images.default}}" alt="{{nameId}}" />
+  </picture>
+  <p class="our-developers-list__text">{{name}}</p>
+  <h4 class="our-developers-list__title">{{position}}</h4>
+  <ul class="our-developers-svg-list">
+    {{#each icons}}
+    <li class="our-developers-svg-list__item">
+      <a class="our-developers-svg-list__link" href="#">
+        <svg width="20" height="20">
+          <use href="{{this}}"></use>
+        </svg>
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+</li>
