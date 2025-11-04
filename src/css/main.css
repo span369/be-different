@@ -834,20 +834,31 @@ body {
   margin: 0 auto 30px;
 }
 .our-developers-list {
+  padding-bottom: 5px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  height: auto;
+  overflow: auto;
+}
+@media screen and (min-width: 480px) {
+  .our-developers-list {
+    height: 2070px;
+  }
 }
 @media screen and (min-width: 768px) {
   .our-developers-list {
-    overflow: auto;
+    height: 1086px;
     display: flex;
-    flex-direction: row;
+    justify-content: _;
+    align-items: _;
+    gap: 12px;
     flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1200px) {
   .our-developers-list {
+    height: 429px;
     display: flex;
     justify-content: _;
     align-items: _;
