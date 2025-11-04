@@ -29,11 +29,11 @@
     overflow: auto; //! для Intersection Observer
     
     @media screen and (min-width: getBreakPoint("mobile")) {
-        height: 2070px; //! для Intersection Observer
+        height: 2071px; //! для Intersection Observer
       }
 
     @media screen and (min-width: getBreakPoint("tablet")) {
-      height: 1086px; //! для Intersection Observer
+      height: 1087px; //! для Intersection Observer
       // display: flex;
       // flex-direction: row;
       // flex-wrap: wrap;
@@ -42,7 +42,7 @@
     }
 
     @media screen and (min-width: getBreakPoint("desktop")) {
-      height: 429px; //! для Intersection Observer
+      height: 426px; //! для Intersection Observer
       // @include flex(_, _, _, _, _); //?
       @include flex(_, _, 16px, _, _); //! для Intersection Observer
     }
