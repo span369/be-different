@@ -4,6 +4,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  .container {
+    padding-bottom: 30px;
+  }
+
   &-title {
     text-align: center;
     color: getColor("link");
@@ -17,17 +21,30 @@
   }
 
   &-list {
+    padding-bottom: 5px; //! для Intersection Observer
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
+    justify-content: flex-start; //! для Intersection Observer
+    height: auto; //! для Intersection Observer
+    overflow: auto; //! для Intersection Observer
     
+    @media screen and (min-width: getBreakPoint("mobile")) {
+        height: 2071px; //! для Intersection Observer
+      }
+
     @media screen and (min-width: getBreakPoint("tablet")) {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 30px;
+      height: 1087px; //! для Intersection Observer
+      // display: flex;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      // gap: 30px;
+      @include flex(center, _, 12px, wrap, row); //! для Intersection Observer
     }
+
     @media screen and (min-width: getBreakPoint("desktop")) {
-      @include flex(_, _, _, _, _);
+      height: 426px; //! для Intersection Observer
+      // @include flex(_, _, _, _, _); //?
+      @include flex(_, _, 16px, _, _); //! для Intersection Observer
     }
 
     &__item {
@@ -38,7 +55,7 @@
       width: 450px;
       text-align: center;
       padding-bottom: 24px;
-      margin-bottom: 30px;
+      // margin-bottom: 30px; //! для Intersection Observer
       // outline: 1px solid blue;
 
       @media screen and (min-width: getBreakPoint("tablet")) {

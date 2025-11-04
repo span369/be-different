@@ -849,7 +849,7 @@ body {
   .our-developers-list {
     height: 1087px;
     display: flex;
-    justify-content: _;
+    justify-content: center;
     align-items: _;
     gap: 12px;
     flex-wrap: wrap;
