@@ -842,12 +842,12 @@ body {
 }
 @media screen and (min-width: 480px) {
   .our-developers-list {
-    height: 2070px;
+    height: 2071px;
   }
 }
 @media screen and (min-width: 768px) {
   .our-developers-list {
-    height: 1086px;
+    height: 1087px;
     display: flex;
     justify-content: _;
     align-items: _;
@@ -858,7 +858,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .our-developers-list {
-    height: 429px;
+    height: 426px;
     display: flex;
     justify-content: _;
     align-items: _;
