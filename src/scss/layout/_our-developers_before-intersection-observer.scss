@@ -1,0 +1,185 @@
+.our-developers {
+  background-color: getColor("title");
+  // background-color: yellow;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &-title {
+    text-align: center;
+    color: getColor("link");
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  &__add-button {
+    @include btn();
+    margin: 0 auto 30px;
+  }
+
+  &-list {
+    align-items: center;
+    justify-content: center;
+    
+    @media screen and (min-width: getBreakPoint("tablet")) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    @media screen and (min-width: getBreakPoint("desktop")) {
+      @include flex(_, _, _, _, _);
+    }
+
+    &__item {
+      background-color: getColor("light");
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+      width: 450px;
+      text-align: center;
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+      // outline: 1px solid blue;
+
+      @media screen and (min-width: getBreakPoint("tablet")) {
+        width: 354px;
+      }
+      @media screen and (min-width: getBreakPoint("desktop")) {
+        width: 270px;
+      }
+    }
+
+    &__img {
+      margin-bottom: 30px;
+      width: 450px;
+      cursor: pointer; //!
+    }
+
+    &__text {
+      color: getColor("link");
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      color: getColor("text");
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .our-developers-svg-list {
+      @include flex(center, center, _, _, _);
+
+      gap: 10px;
+
+      &__item {
+        @include flex(_, _, _, _, _);
+      }
+
+      &__link {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        fill: #afb1b8;
+
+        display: flex; // вирівнюємо
+        align-items: center; // по вертикалі
+        justify-content: center; // по горизонталі
+
+        transition-property: background-color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      &__link:hover {
+        fill: getColor("light");
+        background-color: var(--button-color);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .our-developers {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: getColor("title");
+
+    .our-developers-title {
+      font-size: 22px;
+      margin-bottom: 24px;
+      color: getColor("link");
+      letter-spacing: 0.5px;
+    }
+
+    .our-developers-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      &__item {
+        width: 90%;
+        max-width: 360px;
+        background-color: getColor("light");
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+      }
+
+      &__img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 20px;
+      }
+
+      
+
+      &__text {
+        font-size: 15px;
+        font-weight: 600;
+        color: getColor("link");
+        margin-bottom: 6px;
+      }
+
+      &__title {
+        font-size: 14px;
+        color: getColor("text");
+        margin-bottom: 14px;
+      }
+
+      .our-developers-svg-list {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        &__link {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: rgba(175, 177, 184, 0.15);
+          fill: #afb1b8;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: var(--button-color);
+            fill: getColor("light");
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
