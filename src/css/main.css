@@ -807,6 +807,9 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.our-developers .container {
+  padding-bottom: 30px;
+}
 .our-developers-title {
   text-align: center;
   color: #212121;
@@ -836,6 +839,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .our-developers-list {
+    overflow: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -847,7 +851,7 @@ body {
     display: flex;
     justify-content: _;
     align-items: _;
-    gap: _;
+    gap: 16px;
     flex-wrap: _;
     flex-direction: _;
   }
@@ -859,7 +863,6 @@ body {
   width: 450px;
   text-align: center;
   padding-bottom: 24px;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .our-developers-list__item {
