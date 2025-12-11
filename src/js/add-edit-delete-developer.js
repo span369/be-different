@@ -21,6 +21,7 @@ const btnDeleteDeveloper = document.querySelector("[data-btn-delete-developer]")
 const btnCancelDeveloper = document.querySelector("[data-btn-cancel-developer]");
 //todo: Модальне вікно ПІДТВЕРДЖЕННЯ або СКАСУВАННЯ ВИДАЛЕННЯ картки розробника: modal-confirm-for-delete
 const modalConfirmForRemoval = document.querySelector("[data-modal-confirm-for-removal]");
+const developerNameDeleted = document.querySelector('.modal-confirm-for-removal__developer-name-deleted');
 //todo: Кнопки модального вікна odal-confirm-for-delete
 const btnDeleteModalConfirmForRemoval = document.querySelector("[data-modal-confirm-for-removal-delete]");
 const btnCancelModalConfirmForRemoval = document.querySelector("[data-modal-confirm-for-removal-cancel]");
@@ -111,23 +112,52 @@ function deleteDeveloper() {
     //! ВІДКРИВАЄМО модальне вікно для ПІДТВЕРДЖЕННЯ або СКАСУВАННЯ ВИДАЛЕННЯ картки розробника
     toggleModalConfirmForRemoval();
 
-    // console.log("index:", index); //!
-    dataDevelopersList.splice(index, 1);
-    // console.log("dataDevelopersList (після ВИДАЛЕННЯ):", dataDevelopersList); //!
+    //! Додємо слухачів на кнопки [Так](delete) та [Ні](cancel!):
+    btnDeleteModalConfirmForRemoval.addEventListener("click", confirmDeletion);
+    btnCancelModalConfirmForRemoval.addEventListener("click", confirmCancelDeletion);
 
-    //todo: ПЕРЕЗАПИСУЄМО змінений dataDevelopersList в Локальне сховище (localStorage)
-    localStorage.setItem("dataDevelopers", JSON.stringify(dataDevelopersList));
+    //! Пошук імені розробника
+    console.log("index:", index); //!
+    console.log("dataDevelopersList[index].name:", dataDevelopersList[index].name); //!
+    developerNameDeleted.textContent = dataDevelopersList[index].name;
 
-    //todo: ОЧИЩАЄМО поля форми для РЕДАГУВАННЯ/ВИДАЛЕННЯ
-    formAddEditDeveloper.reset();
+    //! Функція ВИДАЛЯЄ картку розробника
+    function confirmDeletion(){
+        //todo: ЗАКРИВАЄМО модальне вікно для ПІДТВЕРДЖЕННЯ або СКАСУВАННЯ ВИДАЛЕННЯ картки розробника
+        toggleModalConfirmForRemoval();
 
-    //todo: ЗАКРИВАЄМО модальне вікно з формою для РЕДАГУВАННЯ/ВИДАЛЕННЯ
-    toggleModalAddEditDeveloper();
+        //todo: Видаляємо слухачів з кнопок [Так](delete) та [Ні](cancel!):
+        btnDeleteModalConfirmForRemoval.removeEventListener("click", confirmDeletion);
+        btnCancelModalConfirmForRemoval.removeEventListener("click", confirmCancelDeletion);
 
-    //todo: Перезавантаження сторінки:
-    window.location.href = window.location.href; //todo: скидає всю програму - начебто користувач натиснув F5
-    // window.location.reload(); //todo: перезавантажує сторінку за допомогою кешу браузера.
-    // window.location.reload(true); //todo: жорстке перезавантаження з обходом кешу (не підтримується у всіх браузерах.)
+        //todo: ВИДАЛЯЄМО картку розробника
+        dataDevelopersList.splice(index, 1);
+        // console.log("dataDevelopersList (після ВИДАЛЕННЯ):", dataDevelopersList); //!
+
+        //todo: ПЕРЕЗАПИСУЄМО змінений dataDevelopersList в Локальне сховище (localStorage)
+        localStorage.setItem("dataDevelopers", JSON.stringify(dataDevelopersList));
+
+        //todo: ОЧИЩАЄМО поля форми для РЕДАГУВАННЯ/ВИДАЛЕННЯ
+        formAddEditDeveloper.reset();
+
+        //todo: ЗАКРИВАЄМО модальне вікно з формою для РЕДАГУВАННЯ/ВИДАЛЕННЯ
+        toggleModalAddEditDeveloper();
+
+        //todo: Перезавантаження сторінки:
+        window.location.href = window.location.href; //todo: скидає всю програму - начебто користувач натиснув F5
+        // window.location.reload(); //todo: перезавантажує сторінку за допомогою кешу браузера.
+        // window.location.reload(true); //todo: жорстке перезавантаження з обходом кешу (не підтримується у всіх браузерах.)
+    };
+
+    //! Функція СКАСОВУЄ видалення картки розробника
+    function confirmCancelDeletion() {
+        //todo: ЗАКРИВАЄМО модальне вікно для ПІДТВЕРДЖЕННЯ або СКАСУВАННЯ ВИДАЛЕННЯ картки розробника
+        toggleModalConfirmForRemoval();
+
+        //todo: Видаляємо слухачів з кнопок [Так](delete) та [Ні](cancel!):
+        btnDeleteModalConfirmForRemoval.removeEventListener("click", confirmDeletion);
+        btnCancelModalConfirmForRemoval.removeEventListener("click", confirmCancelDeletion);
+    };
 };
 
 
@@ -239,5 +269,5 @@ function closeModalAddEditDeveloper() {
 function toggleModalConfirmForRemoval() {
     console.log("ПІДТВЕРДЖЕННЯ ВИДАЛЕННЯ/СКАСУВАННЯ картки розробника");
     modalConfirmForRemoval.classList.toggle("is-hidden");
-    document.body.classList.toggle("no-scroll");
+    // document.body.classList.toggle("no-scroll");
 };
