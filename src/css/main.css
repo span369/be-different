@@ -1631,14 +1631,6 @@ body {
   background-color: #9c9c9c;
 }
 
-.save-input:hover {
-  background-color: #ddad00;
-}
-
-#post-title-id {
-  font-size: 1.5em;
-}
-
 .form-add-edit-developer {
   background-color: #fff;
   padding: 24px;
