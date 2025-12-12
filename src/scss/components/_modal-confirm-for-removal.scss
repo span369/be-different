@@ -30,15 +30,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    // width: 300px;
-    // height: 100px;
     max-width: max-content;
     min-height: max-content;
     padding: 24px;
     text-align: center;
     border-radius: 10px;
     transform: translate(-50%, -50%);
-    background-color: #c9fffb;
+    background-color: #f5ffc9;
 
     & h3 {
         margin-bottom: 20px;
@@ -55,10 +53,10 @@
         justify-content: space-around;
     }
     &__btn-delete {
-        @include btn(#960000);
+        @include btn(#96000096);
     }
     &__btn-cancel {
-        @include btn(#009600);
+        @include btn(#00960096);
     }
     & button {
         width: 100px;
