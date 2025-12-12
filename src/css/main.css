@@ -1739,7 +1739,7 @@ body {
   text-align: center;
   border-radius: 10px;
   transform: translate(-50%, -50%);
-  background-color: #c9fffb;
+  background-color: #f5ffc9;
 }
 .modal-confirm-for-removal h3 {
   margin-bottom: 20px;
@@ -1765,7 +1765,7 @@ body {
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--white-color);
-  background-color: #960000;
+  background-color: rgba(150, 0, 0, 0.5882352941);
   cursor: pointer;
 }
 .modal-confirm-for-removal__btn-cancel {
@@ -1781,7 +1781,7 @@ body {
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--white-color);
-  background-color: #009600;
+  background-color: rgba(0, 150, 0, 0.5882352941);
   cursor: pointer;
 }
 .modal-confirm-for-removal button {

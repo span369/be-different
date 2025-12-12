@@ -15,14 +15,14 @@ const modalAddEditDeveloper = document.querySelector("[data-modal-add-edit-devel
 const formAddEditDeveloper = document.querySelector(".form-add-edit-developer");
 const formTitle = document.querySelector(".form-add-edit-developer__title");
 const imageDeveloper = document.querySelector(".form-add-edit-developer__image-developer");
-//todo: Кнопки модальних вікон form-add-edit-developer
+//todo: Кнопки модальних вікон: form-add-edit-developer
 const btnAddEditDeveloper = document.querySelector(".form-add-edit-developer__btn-add-edit-developer");
 const btnDeleteDeveloper = document.querySelector("[data-btn-delete-developer]");
 const btnCancelDeveloper = document.querySelector("[data-btn-cancel-developer]");
 //todo: Модальне вікно ПІДТВЕРДЖЕННЯ або СКАСУВАННЯ ВИДАЛЕННЯ картки розробника: modal-confirm-for-delete
 const modalConfirmForRemoval = document.querySelector("[data-modal-confirm-for-removal]");
 const developerNameDeleted = document.querySelector('.modal-confirm-for-removal__developer-name-deleted');
-//todo: Кнопки модального вікна odal-confirm-for-delete
+//todo: Кнопки модального вікна: modal-confirm-for-delete
 const btnDeleteModalConfirmForRemoval = document.querySelector("[data-modal-confirm-for-removal-delete]");
 const btnCancelModalConfirmForRemoval = document.querySelector("[data-modal-confirm-for-removal-cancel]");
 
@@ -269,5 +269,4 @@ function closeModalAddEditDeveloper() {
 function toggleModalConfirmForRemoval() {
     console.log("ПІДТВЕРДЖЕННЯ ВИДАЛЕННЯ/СКАСУВАННЯ картки розробника");
     modalConfirmForRemoval.classList.toggle("is-hidden");
-    // document.body.classList.toggle("no-scroll");
 };
