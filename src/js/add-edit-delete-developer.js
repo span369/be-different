@@ -319,26 +319,30 @@ function submitModalAddEditDeveloper(event) {
         // dataDevelopersList[index].position = newDeveloperData.developerPosition;
         // // console.log("editableCard_ПІСЛЯ:", dataDevelopersList[index]);  //todo: Картка розробника, що відредагована - ПІСЛЯ
         // // console.log("dataDevelopersList (після РЕДАГУВАННЯ):", dataDevelopersList); //!
+    
+        //* NEW: Заміна властивостей
+        //? PATCH  або PUT:
+        const requestBody = {
+            id: index,
+            name: newDeveloperData.developerName,
+            position: newDeveloperData.developerPosition
+        };
+
+        const options = {
+            method: "PATCH", //! операція UPDATE, оновлення
+            // method: "PUT", //! операція UPDATE, оновлення
+            body: JSON.stringify(requestBody), //! конвертація даних у JSON-формат
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8",
+            },
+        };
+
+        fetch(`http://localhost:3002/developers/${requestBody.id}`, options)
+            .then(response => response.json())
+            .then(developer => console.log(`Відповідь сервера на ${options.method}:`, developer))
+            .catch(error => console.log(error))
+            .finally(() => console.log("PATCH  або PUT"));
     };
-
-    //* NEW: Заміна властивостей
-    //? PATCH  або PUT:
-    const requestBody = { id: index, ...newDeveloperData };
-
-    const options = {
-        method: "PATCH", //! операція UPDATE, оновлення
-        // method: "PUT", //! операція UPDATE, оновлення
-        body: JSON.stringify(requestBody), //! конвертація даних у JSON-формат
-        headers: {
-            "Content-Type": "application/json; charset=UTF-8",
-        },
-    };
-
-    fetch(`http://localhost:3002/developers/${requestBody.id}`, options)
-        .then(response => response.json())
-        .then(post => console.log(`Відповідь сервера на ${options.method}:`, post))
-        .catch(error => console.log(error))
-        .finally(() => console.log("PATCH  або PUT"));
 
     //todo: ПЕРЕЗАПИСУЄМО змінений dataDevelopersList в Локальне сховище (localStorage)
     // todo: OLD
