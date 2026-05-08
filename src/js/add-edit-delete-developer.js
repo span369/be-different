@@ -3,9 +3,24 @@ console.log(
     'color: white; background-color: #D33F49',
 );
 
-//! Зчитуємо дані з Локального сховища (localStorage) та Парсимо (конвертуємо) їх в Масив Об'єктів: dataDevelopersList
-const dataDevelopersList = JSON.parse(localStorage.getItem("dataDevelopers")); //todo: var. 2
-console.log("dataDevelopersList (після парсингу з localStorage):", dataDevelopersList); //!
+//todo: OLD
+// Зчитуємо дані з Локального сховища (localStorage) та Парсимо (конвертуємо) їх в Масив Об'єктів: dataDevelopersList
+// const dataDevelopersList = JSON.parse(localStorage.getItem("dataDevelopers")); //todo: var. 2
+// console.log("dataDevelopersList (після парсингу з localStorage):", dataDevelopersList); //!
+
+//*: NEW
+//! Зчитуємо дані з json-server та зберігаємо їх в Масив Об'єктів: dataDevelopersList
+let dataDevelopersList = null;
+function fetchDevelopers() {
+    fetch("http://localhost:3002/developers") //todo: var.1 
+        // return fetch(url) //todo: var.2 
+        .then(response => response.json())
+        // .then(data => console.log("data:", data))
+        .then(data => dataDevelopersList = data);
+};
+fetchDevelopers();
+
+
 
 //! Знаходимо необхідні елементи
 const addDeveloperButton = document.querySelector(".our-developers__add-button");
@@ -99,6 +114,8 @@ function editDeveloper(event) {
     formAddEditDeveloper.developerPosition.value = editableCard.position;
     imageDeveloper.src = editableCard.images.default;
     imageDeveloper.alt = editableCard.nameId;
+
+    console.log("dataDevelopersList (клік на зображенні):", dataDevelopersList); //!
 
     //todo: ВІДКРИВАЄМО модальне вікно з формою для РЕДАГУВАННЯ/ВИДАЛЕННЯ
     toggleModalAddEditDeveloper();
@@ -194,6 +211,7 @@ function submitModalAddEditDeveloper(event) {
     //         // console.log("index:", index); //!
     //     };
     // };
+
 
     //todo: ДОДАВАННЯ
     if (btnAddEditDeveloper.textContent === "Додати") {
