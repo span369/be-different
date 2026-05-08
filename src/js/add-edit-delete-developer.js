@@ -100,11 +100,24 @@ function editDeveloper(event) {
 
     //todo: Пошук КАРТКИ РОЗРОБНИКА, що редагується та її ИНДЕКСА в dataDevelopersList
     console.log("event.target.alt", event.target.alt); //!
+    //todo: OLD
+    // for (let i = 0; i < dataDevelopersList.length; i++) {
+    //     if (dataDevelopersList[i].nameId === event.target.alt) {
+    //         editableCard = dataDevelopersList[i];
+    //         console.log("editableCard:", editableCard);  //todo: Картка розробника, що редагується
+    //         index = i;
+    //         console.log("index:", index); //!
+    //     };
+    // };
+
+    //* NEW
+    //? Пошук посту, що редагується Масив Об'єктів: dataDevelopersList після fetch("http://localhost:3002/developers")
+    console.log("dataDevelopersList --> РЕДАГУЄМО/+ВИДАЛЯЄМО розробників:", dataDevelopersList);  //!
     for (let i = 0; i < dataDevelopersList.length; i++) {
         if (dataDevelopersList[i].nameId === event.target.alt) {
             editableCard = dataDevelopersList[i];
             console.log("editableCard:", editableCard);  //todo: Картка розробника, що редагується
-            index = i;
+            index = editableCard.id;
             console.log("index:", index); //!
         };
     };
@@ -299,12 +312,33 @@ function submitModalAddEditDeveloper(event) {
     //todo: РЕДАГУВАННЯ
     if (btnAddEditDeveloper.textContent === "Редагувати") {
         console.log("Режим РЕДАГУВАННЯ");
-        ///todo: Заміна властивостей
-        dataDevelopersList[index].name = newDeveloperData.developerName;
-        dataDevelopersList[index].position = newDeveloperData.developerPosition;
-        // console.log("editableCard_ПІСЛЯ:", dataDevelopersList[index]);  //todo: Картка розробника, що відредагована - ПІСЛЯ
-        // console.log("dataDevelopersList (після РЕДАГУВАННЯ):", dataDevelopersList); //!
+
+        //todo: OLD
+        // //todo: Заміна властивостей
+        // dataDevelopersList[index].name = newDeveloperData.developerName;
+        // dataDevelopersList[index].position = newDeveloperData.developerPosition;
+        // // console.log("editableCard_ПІСЛЯ:", dataDevelopersList[index]);  //todo: Картка розробника, що відредагована - ПІСЛЯ
+        // // console.log("dataDevelopersList (після РЕДАГУВАННЯ):", dataDevelopersList); //!
     };
+
+    //* NEW: Заміна властивостей
+    //? PATCH  або PUT:
+    const requestBody = { id: index, ...newDeveloperData };
+
+    const options = {
+        method: "PATCH", //! операція UPDATE, оновлення
+        // method: "PUT", //! операція UPDATE, оновлення
+        body: JSON.stringify(requestBody), //! конвертація даних у JSON-формат
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8",
+        },
+    };
+
+    fetch(`http://localhost:3002/developers/${requestBody.id}`, options)
+        .then(response => response.json())
+        .then(post => console.log(`Відповідь сервера на ${options.method}:`, post))
+        .catch(error => console.log(error))
+        .finally(() => console.log("PATCH  або PUT"));
 
     //todo: ПЕРЕЗАПИСУЄМО змінений dataDevelopersList в Локальне сховище (localStorage)
     // todo: OLD
