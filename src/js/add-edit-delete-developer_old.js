@@ -200,7 +200,6 @@ function submitModalAddEditDeveloper(event) {
         console.log("Режим ДОДАВАННЯ");
 
         //todo: Створюємо новий об'єкт КАРТКИ РОЗРОБНИКА
-        //todo: OLD
         const newDeveloperCard = {
             name: newDeveloperData.developerName,
             nameId: newDeveloperData.developerName,
@@ -232,50 +231,8 @@ function submitModalAddEditDeveloper(event) {
         };
 
         //todo: Додаємо новий об'єкт КАРТКИ РОЗРОБНИКА в Масив Об'єктів: dataDevelopersList
-        // dataDevelopersList.push(newDeveloperCard); //todo: OLD
+        dataDevelopersList.push(newDeveloperCard);
         // console.log("dataDevelopersList (після ДОДАВАННЯ нової КАРТКИ РОЗРОБНИКА):", dataDevelopersList); //!
-        //! Meтод POST. Операція CREATE. Створення
-        const requestBody = {
-            name: newDeveloperData.developerName,
-            nameId: newDeveloperData.developerName,
-            position: newDeveloperData.developerPosition,
-            images: {
-                desktop: [
-                    "/be-different/images/sample-desktop-1x.jpg" + " 1x,",
-                    "/be-different/images/sample-desktop-2x.jpg" + " 2x,",
-                    "/be-different/images/sample-desktop-3x.jpg" + " 3x"
-                ],
-                tablet: [
-                    "/be-different/images/sample-tablet-1x.jpg" + " 1x,",
-                    "/be-different/images/sample-tablet-2x.jpg" + " 2x,",
-                    "/be-different/images/sample-tablet-3x.jpg" + " 3x"
-                ],
-                mobile: [
-                    "/be-different/images/sample-mobile-1x.jpg" + " 1x,",
-                    "/be-different/images/sample-mobile-2x.jpg" + " 2x,",
-                    "/be-different/images/sample-mobile-3x.jpg" + " 3x"
-                ],
-                default: "/be-different/images/sample-mobile-1x.jpg"
-            },
-            icons: [
-                "/be-different/images/symboldefs.svg#instagram",
-                "/be-different/images/symboldefs.svg#twitter",
-                "/be-different/images/symboldefs.svg#facebook",
-                "/be-different/images/symboldefs.svg#linkedin"
-            ]
-        };
-        const options = {
-            method: "POST", //! операція CREATE, створення
-            body: JSON.stringify(requestBody), //! конвертація даних у JSON-формат
-            headers: {
-                "Content-Type": "application/json; charset=UTF-8",
-            },
-        };
-        fetch("http://localhost:3002/developers", options)
-            .then(response => response.json())
-            .then(post => console.log("Відповідь сервера на POST:", post))
-            .catch(error => console.log(error))
-            .finally(() => console.log("✏️Meтод POST. Операція CREATE. Створення"));
     };
 
     //todo: РЕДАГУВАННЯ
@@ -289,8 +246,7 @@ function submitModalAddEditDeveloper(event) {
     };
 
     //todo: ПЕРЕЗАПИСУЄМО змінений dataDevelopersList в Локальне сховище (localStorage)
-    // todo: OLD
-    // localStorage.setItem("dataDevelopers", JSON.stringify(dataDevelopersList));
+    localStorage.setItem("dataDevelopers", JSON.stringify(dataDevelopersList));
 
     //todo: ОЧИЩАЄМО поля форми для РЕДАГУВАННЯ/ВИДАЛЕННЯ
     formAddEditDeveloper.reset();
