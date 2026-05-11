@@ -148,8 +148,12 @@ function deleteDeveloper() {
 
     //! Пошук імені розробника
     console.log("index:", index); //!
-    console.log("dataDevelopersList[index].name:", dataDevelopersList[index].name); //!
-    developerNameDeleted.textContent = dataDevelopersList[index].name;
+    // console.log("dataDevelopersList[index].name:", dataDevelopersList[index].name); //todo: OLD
+    // developerNameDeleted.textContent = dataDevelopersList[index].name; //todo: OLD
+    //* NEW
+    const nameToBeDeleted = (dataDevelopersList.filter((developer) => developer.id === index))[0].name
+    console.log("nameToBeDeleted:", nameToBeDeleted); //!
+    developerNameDeleted.textContent = nameToBeDeleted; 
 
     //! Функція ВИДАЛЯЄ картку розробника
     function confirmDeletion(){
@@ -161,11 +165,22 @@ function deleteDeveloper() {
         btnCancelModalConfirmForRemoval.removeEventListener("click", confirmCancelDeletion);
 
         //todo: ВИДАЛЯЄМО картку розробника
-        dataDevelopersList.splice(index, 1);
+        //todo: OLD
+        // dataDevelopersList.splice(index, 1);
         // console.log("dataDevelopersList (після ВИДАЛЕННЯ):", dataDevelopersList); //!
+        //*: NEW
+        const options = {
+            method: "DELETE", //! операція DELETE, видалення
+        };
+        fetch(`http://localhost:3002/developers/${index}`, options)
+            .then(response => console.log("Відповідь сервера на DELETE:", response))
+            .catch(error => console.log(error))
+            .finally(() => console.log("операція DELETE завершена"));
+
 
         //todo: ПЕРЕЗАПИСУЄМО змінений dataDevelopersList в Локальне сховище (localStorage)
-        localStorage.setItem("dataDevelopers", JSON.stringify(dataDevelopersList));
+        //todo: OLD
+        // localStorage.setItem("dataDevelopers", JSON.stringify(dataDevelopersList));
 
         //todo: ОЧИЩАЄМО поля форми для РЕДАГУВАННЯ/ВИДАЛЕННЯ
         formAddEditDeveloper.reset();
@@ -306,7 +321,7 @@ function submitModalAddEditDeveloper(event) {
             .then(response => response.json())
             .then(post => console.log("Відповідь сервера на POST:", post))
             .catch(error => console.log(error))
-            .finally(() => console.log("✏️Meтод POST. Операція CREATE. Створення"));
+            .finally(() => console.log("✏️Meтод POST. Операція CREATE. Створення - завершено"));
     };
 
     //todo: РЕДАГУВАННЯ
@@ -341,7 +356,7 @@ function submitModalAddEditDeveloper(event) {
             .then(response => response.json())
             .then(developer => console.log(`Відповідь сервера на ${options.method}:`, developer))
             .catch(error => console.log(error))
-            .finally(() => console.log("PATCH  або PUT"));
+            .finally(() => console.log("PATCH  або PUT завершено"));
     };
 
     //todo: ПЕРЕЗАПИСУЄМО змінений dataDevelopersList в Локальне сховище (localStorage)
