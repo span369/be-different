@@ -9,11 +9,17 @@ console.log(
 // console.log("dataDevelopersList (після парсингу з localStorage):", dataDevelopersList); //!
 
 //*: NEW
+//! Створюємо рядок запиту
+const BASEURL = "http://localhost:3000/"
+const EndPoint = "developers-team"
+const url =`${BASEURL}${EndPoint}`
+console.log("url:", url); //!
+
 //! Зчитуємо дані з json-server та зберігаємо їх в Масив Об'єктів: dataDevelopersList
 let dataDevelopersList = null;
 function fetchDevelopers() {
-    fetch("http://localhost:3002/developers") //todo: var.1 
-        // return fetch(url) //todo: var.2 
+    // fetch("http://localhost:3000/developers-team") //todo: var.1 
+        return fetch(url) //todo: var.2 
         .then(response => response.json())
         // .then(data => console.log("data:", data))
         .then(data => dataDevelopersList = data);
@@ -111,7 +117,7 @@ function editDeveloper(event) {
     // };
 
     //* NEW
-    //? Пошук посту, що редагується Масив Об'єктів: dataDevelopersList після fetch("http://localhost:3002/developers")
+    //? Пошук посту, що редагується Масив Об'єктів: dataDevelopersList після fetch("http://localhost:3000/developers-team")
     console.log("dataDevelopersList --> РЕДАГУЄМО/+ВИДАЛЯЄМО розробників:", dataDevelopersList);  //!
     for (let i = 0; i < dataDevelopersList.length; i++) {
         if (dataDevelopersList[i].nameId === event.target.alt) {
@@ -172,7 +178,7 @@ function deleteDeveloper() {
         const options = {
             method: "DELETE", //! операція DELETE, видалення
         };
-        fetch(`http://localhost:3002/developers/${index}`, options)
+        fetch(`${url}/${index}`, options)
             .then(response => console.log("Відповідь сервера на DELETE:", response))
             .catch(error => console.log(error))
             .finally(() => console.log("операція DELETE завершена"));
@@ -317,7 +323,7 @@ function submitModalAddEditDeveloper(event) {
                 "Content-Type": "application/json; charset=UTF-8",
             },
         };
-        fetch("http://localhost:3002/developers", options)
+        fetch("${url}", options)
             .then(response => response.json())
             .then(post => console.log("Відповідь сервера на POST:", post))
             .catch(error => console.log(error))
@@ -352,7 +358,7 @@ function submitModalAddEditDeveloper(event) {
             },
         };
 
-        fetch(`http://localhost:3002/developers/${requestBody.id}`, options)
+        fetch(`${url}/${requestBody.id}`, options)
             .then(response => response.json())
             .then(developer => console.log(`Відповідь сервера на ${options.method}:`, developer))
             .catch(error => console.log(error))

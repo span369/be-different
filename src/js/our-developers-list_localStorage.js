@@ -891,6 +891,13 @@ console.warn("2️⃣JSONdevelopersList (фінальний):", JSONdevelopersLi
 // import dataDevelopersList from "../json/developers-list.json";
 // console.log("dataDevelopersList:", dataDevelopersList); //!
 
+console.log("---------- Так працює, якщо зображення в папці public ----------");
+//! ✅Дані для списку із JSON (так працює всюди✅):
+// import dataDevelopersListJson from "../json/developers-list-public.json";
+import dataDevelopersListJson from "../json/developers-list-public-all.json";
+console.log("dataDevelopersListJson:", dataDevelopersListJson); //!
+dataDevelopersList = dataDevelopersListJson; //! ✅❗️❗️❗️
+console.log("----------------------------------------------------------------");
 
 //! ✅3️⃣Використаємо Локальне сховище (localStorage) у якості бази даних (db) для зберігання dataDevelopersList
 // localStorage.setItem("dataDevelopers", JSONdevelopersList); //todo: var. 1
