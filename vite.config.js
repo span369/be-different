@@ -9,6 +9,7 @@ import FullReload from 'vite-plugin-full-reload';
 export default defineConfig({
   base: '/be-different/', //! 👈 ВАЖЛИВО: вкажіть базу
   root: 'src',
+  publicDir: '../public', //! ❗️❗️❗️ ВАЖЛИВО: для завнтаження зображень на GitHub
   build: {
     rollupOptions: {
       //! ❌ Це шукає тільки HTML-файли верхнього рівня src/, і не включає HTML-файли нижнього рівня
