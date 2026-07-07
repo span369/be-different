@@ -13,6 +13,12 @@ import developerTemplate from "../templates/developer.hbs?raw";
 //! Знаходимо елемент в якому рендерим список розробників
 const developersList = document.querySelector(".our-developers-list");
 
+//! Створюємо рядок запиту
+const BASEURL = "http://localhost:3000/"
+const EndPoint = "developers-team"
+const url =`${BASEURL}${EndPoint}`
+console.log("url:", url); //!
+
 // ===============================================================================================
 //! Працюємо з json-server:
 function getDevelopers() {
@@ -22,8 +28,8 @@ function getDevelopers() {
 };
 
 function fetchDevelopers() {
-    return fetch("http://localhost:3002/developers") //todo: var.1 
-    // return fetch(url) //todo: var.2 
+    // return fetch("http://localhost:3000/developers-team") //todo: var.1 
+    return fetch(url) //todo: var.2 
         .then(response => response.json());
 };
 
@@ -41,5 +47,3 @@ function renderPosts(developers) {
 };
 
 getDevelopers();
-
-

@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 //! 1️⃣ Для всіх <source>
                 picture.querySelectorAll("source").forEach((source) => {
+                    console.log("BEFORE_source.dataset.srcset:", source.dataset.srcset); //!
                     if (source.dataset.srcset) {
+                        console.log("source.dataset.srcset:", source.dataset.srcset); //!
                         source.srcset = source.dataset.srcset;
                     }
                 });
