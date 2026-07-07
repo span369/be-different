@@ -259,27 +259,27 @@ function submitModalAddEditDeveloper(event) {
             position: newDeveloperData.developerPosition,
             images: {
                 desktop: [
-                    new URL("../images/sample-desktop-1x.jpg", import.meta.url).href + " 1x,",
-                    new URL("../images/sample-desktop-2x.jpg", import.meta.url).href + " 2x,",
-                    new URL("../images/sample-desktop-3x.jpg", import.meta.url).href + " 3x"
+                    "images/sample-desktop-1x.jpg 1x,",
+                    "images/sample-desktop-2x.jpg 2x,",
+                    "images/sample-desktop-3x.jpg 3x"
                 ],
                 tablet: [
-                    new URL("../images/sample-tablet-1x.jpg", import.meta.url).href + " 1x,",
-                    new URL("../images/sample-tablet-2x.jpg", import.meta.url).href + " 2x,",
-                    new URL("../images/sample-tablet-3x.jpg", import.meta.url).href + " 3x"
+                    "images/sample-tablet-1x.jpg 1x,",
+                    "images/sample-tablet-2x.jpg 2x,",
+                    "images/sample-tablet-3x.jpg 3x"
                 ],
                 mobile: [
-                    new URL("../images/sample-mobile-1x.jpg", import.meta.url).href + " 1x,",
-                    new URL("../images/sample-mobile-2x.jpg", import.meta.url).href + " 2x,",
-                    new URL("../images/sample-mobile-3x.jpg", import.meta.url).href + " 3x"
+                    "images/sample-mobile-1x.jpg 1x,",
+                    "images/sample-mobile-2x.jpg 2x,",
+                    "images/sample-mobile-3x.jpg 3x"
                 ],
-                default: new URL("../images/sample-mobile-1x.jpg", import.meta.url).href
+                default: "images/sample-mobile-1x.jpg"
             },
             icons: [
-                new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
-                new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
-                new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
-                new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+                "images/symboldefs.svg#instagram",
+                "images/symboldefs.svg#twitter",
+                "images/symboldefs.svg#facebook",
+                "images/symboldefs.svg#linkedin"
             ]
         };
 
@@ -293,27 +293,27 @@ function submitModalAddEditDeveloper(event) {
             position: newDeveloperData.developerPosition,
             images: {
                 desktop: [
-                    "/be-different/images/sample-desktop-1x.jpg" + " 1x,",
-                    "/be-different/images/sample-desktop-2x.jpg" + " 2x,",
-                    "/be-different/images/sample-desktop-3x.jpg" + " 3x"
+                    "images/sample-desktop-1x.jpg 1x,",
+                    "images/sample-desktop-2x.jpg 2x,",
+                    "images/sample-desktop-3x.jpg 3x"
                 ],
                 tablet: [
-                    "/be-different/images/sample-tablet-1x.jpg" + " 1x,",
-                    "/be-different/images/sample-tablet-2x.jpg" + " 2x,",
-                    "/be-different/images/sample-tablet-3x.jpg" + " 3x"
+                    "images/sample-tablet-1x.jpg 1x,",
+                    "images/sample-tablet-2x.jpg 2x,",
+                    "images/sample-tablet-3x.jpg 3x"
                 ],
                 mobile: [
-                    "/be-different/images/sample-mobile-1x.jpg" + " 1x,",
-                    "/be-different/images/sample-mobile-2x.jpg" + " 2x,",
-                    "/be-different/images/sample-mobile-3x.jpg" + " 3x"
+                    "images/sample-mobile-1x.jpg 1x,",
+                    "images/sample-mobile-2x.jpg 2x,",
+                    "images/sample-mobile-3x.jpg 3x"
                 ],
-                default: "/be-different/images/sample-mobile-1x.jpg"
+                default: "images/sample-mobile-1x.jpg"
             },
             icons: [
-                "/be-different/images/symboldefs.svg#instagram",
-                "/be-different/images/symboldefs.svg#twitter",
-                "/be-different/images/symboldefs.svg#facebook",
-                "/be-different/images/symboldefs.svg#linkedin"
+                "images/symboldefs.svg#instagram",
+                "images/symboldefs.svg#twitter",
+                "images/symboldefs.svg#facebook",
+                "images/symboldefs.svg#linkedin"
             ]
         };
         const options = {
@@ -323,7 +323,7 @@ function submitModalAddEditDeveloper(event) {
                 "Content-Type": "application/json; charset=UTF-8",
             },
         };
-        fetch("${url}", options)
+        fetch(url, options)
             .then(response => response.json())
             .then(post => console.log("Відповідь сервера на POST:", post))
             .catch(error => console.log(error))
